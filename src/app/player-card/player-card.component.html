@@ -16,9 +16,12 @@
                 class="img-fluid" />
             <div *ngIf="team" class="team-name" [style.color]="color">{{team.teamName}}</div>
         </div>
-        <div *ngIf="!bio" class="draft"><div class="loader"></div></div>
-        <div *ngIf="bio" class="draft px-1 pt-1" [style.border-color]="color">
-                        <div class="group">
+        <div *ngIf="!bio" class="draft p-2"><div class="loader"></div></div>
+        <div *ngIf="bio" class="draft p-2" [style.background-color]="color">
+
+            <div *ngIf="bio.round==='Undrafted'">Undrafted</div>
+            <div *ngIf="bio.round !=='Undrafted'">
+            <div class="group">
                 <div class="value">{{bio.round }} round {{bio.pick}} pick</div>
             </div>
             <div class="group">
@@ -29,6 +32,7 @@
                 <div class="label pr-1">By:</div>
                 <div class="value">{{bio.draftTeam}}</div>
             </div>
+        </div>
         </div>
         <div *ngIf="!bio" class="bio"><div class="loader"></div></div>
         <div *ngIf="bio" class="bio">
