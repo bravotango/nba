@@ -4,9 +4,9 @@ import { CountryService } from './country.service';
 
 describe('CountryService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [],
+    imports: [CountryService],
     declarations: [],
-    providers: [CountryService]
+    providers: []
   }));
 
   it('should be created', () => {
