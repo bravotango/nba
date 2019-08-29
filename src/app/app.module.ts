@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PlayerCardComponent } from './player-card/player-card.component';
 import { NgbdTableComplete } from './table-complete/table-complete.component';
 import { NgbdSortableHeader } from './sortable.directive';
+import { DecimalPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { NgbdSortableHeader } from './sortable.directive';
     FormsModule,
     NgbModule,
   ],
-  providers: [ ],
+  providers: [DecimalPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

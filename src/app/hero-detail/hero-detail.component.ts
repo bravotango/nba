@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { StatLine } from '../stats';
-import { Bio } from '../bio';
-import { Team } from '../team';
 
-import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+
+import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {NbaService} from './../nba.service';
 

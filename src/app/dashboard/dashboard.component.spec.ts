@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { DashboardComponent } from './dashboard.component';
+import { PlayerCardComponent } from '../player-card/player-card.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -8,7 +10,8 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [ DashboardComponent, PlayerCardComponent ]
     })
     .compileComponents();
   }));
@@ -17,6 +20,7 @@ describe('DashboardComponent', () => {
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    component.players = [];
   });
 
   it('should create', () => {

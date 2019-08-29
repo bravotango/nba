@@ -9,7 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent implements OnInit {
   constructor(private router: Router) { }
   title = 'Tour-of-Heroes';
-  model = 1;
+  // model = 1;
   ngOnInit() {
     this.router.events.subscribe((evt) => {
         if (!(evt instanceof NavigationEnd)) {

@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { StatLine } from '../stats';
 import { NbaService } from '../nba.service';
-import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 import { Bio } from '../bio';
-import { Observable } from 'rxjs';
 import { Team } from '../team';
 
 @Component({
@@ -23,7 +21,7 @@ export class PlayerCardComponent implements OnInit {
   age:number;
   color:string = "#ccc"
 
-  constructor(private nbaService:NbaService,private route:ActivatedRoute) { }
+  constructor(private nbaService:NbaService) { }
 
   ngOnInit() {
 

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayerCardComponent } from './player-card.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { Team } from '../team';
 
 describe('PlayerCardComponent', () => {
   let component: PlayerCardComponent;
@@ -8,7 +11,8 @@ describe('PlayerCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlayerCardComponent ]
+      imports: [ HttpClientTestingModule, RouterTestingModule ],
+      declarations: [ PlayerCardComponent, Team ]
     })
     .compileComponents();
   }));
